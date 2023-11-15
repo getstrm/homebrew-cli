@@ -5,20 +5,20 @@
 class Pace < Formula
   desc "Command Line Interface for https://pace.io"
   homepage "https://pace.io"
-  version "1.8.1"
+  version "1.9.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/getstrm/cli/releases/download/v1.8.1/pace_darwin_amd64.tar.gz"
-      sha256 "65f9aebb32420559631e0cc7f9ac323461b5c45e3f8ded99fee21c742e016dfd"
+    if Hardware::CPU.arm?
+      url "https://github.com/getstrm/cli/releases/download/v1.9.0/pace_darwin_arm64.tar.gz"
+      sha256 "12199a495a1b5f934272c0abbd01277a1bd2f42e306054d78781a5daade5a706"
 
       def install
         bin.install "pace"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/getstrm/cli/releases/download/v1.8.1/pace_darwin_arm64.tar.gz"
-      sha256 "eda314d8b0305f6e1d25698e377a789194177edc2e60c36885ae5be07ec6cd56"
+    if Hardware::CPU.intel?
+      url "https://github.com/getstrm/cli/releases/download/v1.9.0/pace_darwin_amd64.tar.gz"
+      sha256 "64986e4553d382bd090f9fe974a2b8c7e4ebdf600f63f979684ff7b0bd1557a4"
 
       def install
         bin.install "pace"
@@ -28,16 +28,16 @@ class Pace < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getstrm/cli/releases/download/v1.8.1/pace_linux_arm64.tar.gz"
-      sha256 "09f22c32af3a0da95d9e8c4330ae4ffb56b838d5cbe1ca0e19daf8c3d8e9c64c"
+      url "https://github.com/getstrm/cli/releases/download/v1.9.0/pace_linux_arm64.tar.gz"
+      sha256 "8f47d89c984a56f3209d5b1750e953720f7db25791df7a620283a6c74b70bc05"
 
       def install
         bin.install "pace"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getstrm/cli/releases/download/v1.8.1/pace_linux_amd64.tar.gz"
-      sha256 "f42019dc3d5fddf90bb5937c5593ab5c807b668a61b35b865601637d231ea090"
+      url "https://github.com/getstrm/cli/releases/download/v1.9.0/pace_linux_amd64.tar.gz"
+      sha256 "2c6e45b7ffeca87f594779dbd13a6ffe30612e863afc01c8c3039c9a34e4022a"
 
       def install
         bin.install "pace"
