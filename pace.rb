@@ -5,20 +5,20 @@
 class Pace < Formula
   desc "Command Line Interface for https://pace.io"
   homepage "https://pace.io"
-  version "1.11.0"
+  version "1.12.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/getstrm/cli/releases/download/v1.11.0/pace_darwin_arm64.tar.gz"
-      sha256 "2ae74fc855335e779c8d700765bddfbfb12f55d5b9122b57e4ec63fa09e379b7"
+      url "https://github.com/getstrm/cli/releases/download/v1.12.0/pace_darwin_arm64.tar.gz"
+      sha256 "2e238067fee82990139b052a944edf853f608deb6132364f1c1eed37e328bcae"
 
       def install
         bin.install "pace"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getstrm/cli/releases/download/v1.11.0/pace_darwin_amd64.tar.gz"
-      sha256 "5dc655679560f540ba6074058052cdb8f433a94ec7111c04501ef41366dae7db"
+      url "https://github.com/getstrm/cli/releases/download/v1.12.0/pace_darwin_amd64.tar.gz"
+      sha256 "c1681d016a5df7085cb9c6f7d9f24839b183957228c5f8af2b43864d11e24f6e"
 
       def install
         bin.install "pace"
@@ -28,16 +28,16 @@ class Pace < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/getstrm/cli/releases/download/v1.11.0/pace_linux_amd64.tar.gz"
-      sha256 "f50b881758042415f72a5afa5e2233796a6e6516373436808d993e4031a47f50"
+      url "https://github.com/getstrm/cli/releases/download/v1.12.0/pace_linux_amd64.tar.gz"
+      sha256 "b8cc73476ebf5a2d7427e88ac2370939b23e761987025761013281e2252d178d"
 
       def install
         bin.install "pace"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getstrm/cli/releases/download/v1.11.0/pace_linux_arm64.tar.gz"
-      sha256 "6c7270980ee32077cf89832bb90e0cf215d53971f26cdca268c3b5a363635f91"
+      url "https://github.com/getstrm/cli/releases/download/v1.12.0/pace_linux_arm64.tar.gz"
+      sha256 "239fe2b84b201896a84c9da8a2429dcea72ea865dd49b5eacaf59b600f3f5fad"
 
       def install
         bin.install "pace"
