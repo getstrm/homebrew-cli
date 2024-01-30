@@ -5,20 +5,20 @@
 class Pace < Formula
   desc "Command Line Interface for https://pace.io"
   homepage "https://pace.io"
-  version "1.24.0"
+  version "1.25.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/getstrm/cli/releases/download/v1.24.0/pace_darwin_arm64.tar.gz"
-      sha256 "cd8c6710e6f948ae4232f2cd96e04fd364b62662a992e5f720cf36ee71d20b65"
+      url "https://github.com/getstrm/cli/releases/download/v1.25.0/pace_darwin_arm64.tar.gz"
+      sha256 "5ddd1fe14d82697e3392621287852fe6fffa620149cd0836904e03baa2b940ed"
 
       def install
         bin.install "pace"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getstrm/cli/releases/download/v1.24.0/pace_darwin_amd64.tar.gz"
-      sha256 "151d6f9a402f3806b83a088a4ff7527ab6fa4b099948bc1302c02cbd3a7020b7"
+      url "https://github.com/getstrm/cli/releases/download/v1.25.0/pace_darwin_amd64.tar.gz"
+      sha256 "f15d46fbbf0b414cf82485727d6a8ebc21a0c95eaca1e683820c9453aa1ec996"
 
       def install
         bin.install "pace"
@@ -27,17 +27,17 @@ class Pace < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/getstrm/cli/releases/download/v1.24.0/pace_linux_amd64.tar.gz"
-      sha256 "13d2a23caf0ba11828c3e2ecb63754d43d8d194d0dcc0e9ffd232270f19f699b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/getstrm/cli/releases/download/v1.25.0/pace_linux_arm64.tar.gz"
+      sha256 "c9434175fcd16f9bb8ad07b046e0e0b46115b4e86315da30df7a3569533a24cc"
 
       def install
         bin.install "pace"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getstrm/cli/releases/download/v1.24.0/pace_linux_arm64.tar.gz"
-      sha256 "f9bd69142ee8daf9e4ccd9ffd633173caf14b23329bbb0f8041985e919d31d9f"
+    if Hardware::CPU.intel?
+      url "https://github.com/getstrm/cli/releases/download/v1.25.0/pace_linux_amd64.tar.gz"
+      sha256 "403c9f1f6c5356fdbedf1c4e5e357c2d62971f68244b40f066c0ef9c8b56ca5e"
 
       def install
         bin.install "pace"
